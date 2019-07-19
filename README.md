@@ -1,4 +1,8 @@
-# gulp-inject-version
+# gulp-inject-version2
+
+**fork from https://github.com/dvinciinteractive/gulp-inject-version and https://github.com/dvinciinteractive/gulp-inject-version to fix dependency on deprecated gulp-util**
+
+
 
 Gulp plugin for reading a version number out of a JSON file and injecting it into text based files.
 
@@ -8,16 +12,16 @@ By default, this plugin will read the `version` property from your project's `pa
 
 ### [npm](https://www.npmjs.com)
 ````bash
-npm install gulp-inject-version
+npm install gulp-inject-version2
 ````
 
 ## usage
 ````javascript
-var injectVersion = require('gulp-inject-version');
+var injectVersion2 = require('gulp-inject-version2');
 
 gulp.task('build', function () {
     return gulp.src('src/index.html')
-        .pipe(injectVersion())
+        .pipe(injectVersion2())
         // whatever else you want to do to index.html...
         .pipe(gulp.dest('dist'));
 });
@@ -35,11 +39,11 @@ and the `version` property in your project's `package.json` was set to `'1.0.3'`
 ## options
 An options object can be passed into the plugin like so:
 ````javascript
-var injectVersion = require('gulp-inject-version');
+var injectVersion2 = require('gulp-inject-version2');
 
 gulp.task('build', function () {
     return gulp.src('src/index.html')
-        .pipe(injectVersion({
+        .pipe(injectVersion2({
             package_file: 'bower.json',
             // your other option overrides here
         }))
