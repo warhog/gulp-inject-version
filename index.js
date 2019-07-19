@@ -1,7 +1,7 @@
 var fs = require('fs'),
     through = require('through2'),
     PluginError = require('plugin-error'),
-    plugin_name = 'gulp-inject-version',
+    plugin_name = 'gulp-inject-version2',
     defaults = {
         package_file: 'package.json',
         version_property: 'version',
