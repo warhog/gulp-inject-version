@@ -1,4 +1,8 @@
-# gulp-inject-version
+# gulp-inject-version2
+
+**fork from https://github.com/dvinciinteractive/gulp-inject-version and https://github.com/dvinciinteractive/gulp-inject-version to fix dependency on deprecated gulp-util**
+
+
 
 Gulp plugin for reading a version number out of a JSON file and injecting it into text based files.
 
@@ -8,16 +12,16 @@ By default, this plugin will read the `version` property from your project's `pa
 
 ### [npm](https://www.npmjs.com)
 ````bash
-npm install gulp-inject-version
+npm install gulp-inject-version2
 ````
 
 ## usage
 ````javascript
-var injectVersion = require('gulp-inject-version');
+var injectVersion2 = require('gulp-inject-version2');
 
 gulp.task('build', function () {
     return gulp.src('src/index.html')
-        .pipe(injectVersion())
+        .pipe(injectVersion2())
         // whatever else you want to do to index.html...
         .pipe(gulp.dest('dist'));
 });
@@ -35,11 +39,11 @@ and the `version` property in your project's `package.json` was set to `'1.0.3'`
 ## options
 An options object can be passed into the plugin like so:
 ````javascript
-var injectVersion = require('gulp-inject-version');
+var injectVersion2 = require('gulp-inject-version2');
 
 gulp.task('build', function () {
     return gulp.src('src/index.html')
-        .pipe(injectVersion({
+        .pipe(injectVersion2({
             package_file: 'bower.json',
             // your other option overrides here
         }))
@@ -56,4 +60,4 @@ package_file     | string | The JSON containing file from which we should read t
 version_property | string | The name of the property that holds the version text within the JSON file     | 'version'
 prepend          | string | A string to prepend to the outputted version text                             | 'v'
 append           | string | A string to append to the outputted version text                              | ''
-replace          | string | The placeholder text to be replaced with the version text in the source files | '%%GULP_INJECT_VERSION%%'
+replace          | string | The text or pattern to be sought out and replaced with the version text in the source files | /%%GULP_INJECT_VERSION%%/g

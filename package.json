@@ -1,14 +1,14 @@
 {
-  "name": "gulp-inject-version",
-  "version": "1.0.1",
+  "name": "gulp-inject-version2",
+  "version": "1.0.0",
   "description": "Inject a package version into text based files",
   "main": "index.js",
   "dependencies": {
-    "gulp-util": "^3.0.3",
-    "through2": "^0.6.1"
+    "plugin-error": "^1.0.1",
+    "through2": "^3.0.1"
   },
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "gulp": "^4.0.0"
   },
   "engines": {
     "node": ">= 0.10"
@@ -18,12 +18,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvinciinteractive/gulp-inject-version.git"
+    "url": "https://github.com/warhog/gulp-inject-version2.git"
   },
-  "author": "d'Vinci Interactive <developers@dvinci.com> (http://www.dvinci.com/)",
+  "author": "warhog <warhog@gmx.de>",
   "license": "Proprietary",
   "bugs": {
-    "url": "https://github.com/dvinciinteractive/gulp-inject-version/issues"
+    "url": "https://github.com/warhog/gulp-inject-version2/issues"
   },
-  "homepage": "https://github.com/dvinciinteractive/gulp-inject-version"
+  "homepage": "https://github.com/warhog/gulp-inject-version2"
 }
